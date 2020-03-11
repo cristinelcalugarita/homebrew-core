@@ -12,7 +12,6 @@ class Treefrog < Formula
     sha256 "19cc929312e7be589ec943cc4d12a1a34bd4f0b37a008202ff4e551df5c076b1" => :sierra
   end
 
-  depends_on "cmake"
   depends_on :xcode => ["8.0", :build]
   depends_on :macos => :el_capitan
   depends_on "qt"
