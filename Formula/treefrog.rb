@@ -14,10 +14,11 @@ class Treefrog < Formula
 
   depends_on :xcode => ["8.0", :build]
   depends_on :macos => :el_capitan
+  depends_on "mongo-c-driver"
   depends_on "qt"
 
   def install
-    system "./configure", "--prefix=#{prefix}"
+    system "./configure", "--prefix=#{prefix}", "--enable-shared-mongoc"
 
     cd "src" do
       system "make"
